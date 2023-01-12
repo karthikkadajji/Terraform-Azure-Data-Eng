@@ -4,6 +4,7 @@ module "storage" {
   location             = var.location
   stalocation          = var.stalocation
   primary_subscription = var.primary_subscription
+  destcontainer = var.destcontainer
 }
 
 module "datafactory" {
