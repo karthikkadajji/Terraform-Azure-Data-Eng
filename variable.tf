@@ -9,16 +9,16 @@ variable "prefix" {
 
 variable "location" {
   description = "The Azure Region in which all resources in this project should be created."
-  default     = "westus2"
+  default     = "westeurope"
 }
 
 variable "stalocation" {
   description = "The Azure Region in which all storage account in this project should be created."
-  default     = "westus2"
+  default     = "westeurope"
 }
 
 variable "primary_subscription" {
-  default = "primary subcription"
+  description = "primary subcription"
 }
 
 variable "storageaccount_name" {
@@ -33,7 +33,7 @@ variable "datafactoryname" {
 
 variable "resource_groupname" {
   description = "datafactory name"
-  default = "datafactorykkdp203"
+  default     = "datafactorykkdp203"
 }
 variable "synapseworkspacename" {
   description = "synapse workspace name"
@@ -50,4 +50,17 @@ variable "client_id" {
 
 variable "destcontainer" {
   description = "destination container name in storage group"
+}
+
+variable "principal_id_synapse" {
+  description = "principal id for synapse user"
+}
+
+variable "tenant_id_synapse" {
+  description = "tenant id for synapse user"
+}
+
+variable "object_id_syapse" {
+  description = "object id for synapse user"
+
 }
