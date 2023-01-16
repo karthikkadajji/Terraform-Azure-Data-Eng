@@ -4,7 +4,7 @@ module "storage" {
   location             = var.location
   stalocation          = var.stalocation
   primary_subscription = var.primary_subscription
-  destcontainer = var.destcontainer
+  destcontainer        = var.destcontainer
 }
 
 module "datafactory" {
@@ -19,11 +19,17 @@ module "datafactory" {
   ]
 }
 
-# module "synapsede" {
-#   source               = "./modules/synapseworkspace"
-#   synapseworkspacename = var.synapseworkspacename
-#   # location                             = var.location
-#   resource_groupname = module.storage.resource_groupname
-#   lakeid             = module.storage.lakeid
-# }
+module "synapsede" {
+  source               = "./modules/synapseworkspace"
+  synapseworkspacename = var.synapseworkspacename
+  location             = var.location
+  resource_groupname   = module.storage.resource_groupname
+  lakeid               = module.storage.lakeid
+  principal_id_synapse = var.principal_id_synapse
+  tenant_id_synapse    = var.tenant_id_synapse
+  object_id_syapse     = var.object_id_syapse
+}
 
+module "ad" {
+  source = "./modules/azure-ad"
+}

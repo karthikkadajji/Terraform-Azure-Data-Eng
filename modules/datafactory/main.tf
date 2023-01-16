@@ -129,4 +129,8 @@ resource "azurerm_data_factory_pipeline" "test" {
             }
 ]
   JSON
+  
+  depends_on = [
+    azurerm_data_factory_data_flow.dataflow1
+  ]
 }
