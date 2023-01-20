@@ -21,5 +21,5 @@ After installing brew run the following commands <br>
 ## Running terraform
 
 1. terraform init<br>
-2. terraform apply -var="client_secret=<CLIENT SECRET>"<br> -auto-approve
+2. terraform apply -var="client_secret=<CLIENT SECRET>"  -auto-approve
 

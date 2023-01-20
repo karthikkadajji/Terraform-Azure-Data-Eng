@@ -27,7 +27,7 @@ module "synapsede" {
   lakeid               = module.storage.lakeid
   principal_id_synapse = var.principal_id_synapse
   tenant_id_synapse    = var.tenant_id_synapse
-  object_id_syapse     = var.object_id_syapse
+  object_id_synapse     = var.object_id_synapse
 }
 
 module "ad" {

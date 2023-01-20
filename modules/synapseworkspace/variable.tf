@@ -34,7 +34,7 @@ variable "tenant_id_synapse" {
   description = "tenant id for synapse user"
 }
 
-variable "object_id_syapse" {
+variable "object_id_synapse" {
   description = "object id for synapse user"
 
 }
