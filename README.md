@@ -1,5 +1,6 @@
 # Terraform for Azure Data Engineering
 
+Sets up Azure DataFactory with 2 containers. It Copies contents from one container to the dest container. It also creates Storage Group, Azure Synapse Analytics with Dedicated SQL pool. Access to Azure synapse Analytics is given to the primary subscription from all IP. 
 ## Installing
 
 install Brew
@@ -21,5 +22,5 @@ After installing brew run the following commands <br>
 ## Running terraform
 
 1. terraform init<br>
-2. terraform apply -var="client_secret=<CLIENT SECRET>"  -auto-approve
+2. terraform apply -var="client_secret=CLIENT_SECRET" -var="client_id=CLIENT_ID" -var="tenant_id=TENTANT_ID"         -var="primary_subscription=SUBSCRIPTION_ID" -auto-approve
 
